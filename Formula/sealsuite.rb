@@ -4,9 +4,9 @@
 class Sealsuite < Formula
   desc "VPN client with userspace SOCKS5 mode"
   homepage "https://github.com/SkyLee365/corplink-py"
-  url "https://github.com/SkywardLab/homebrew-sealsuite/releases/download/v1.7.1/SealSuite-CLI-v1.7.1-macos-arm64.tar.xz"
-  version "1.7.1"
-  sha256 "bcc4ad234df58c4f540b609ad4c143693c73a2b2e1f0a5502891798d54ef5c91"
+  url "https://github.com/SkywardLab/homebrew-sealsuite/releases/download/v1.8.0/SealSuite-CLI-v1.8.0-macos-arm64.tar.xz"
+  version "1.8.0"
+  sha256 "b35aa255a63220408fe22ec4c045d7dfa20c536a527ad7e88059117e11398b5a"
 
   depends_on arch: :arm64
   depends_on :macos

@@ -47,9 +47,9 @@ Service logs:
 
 ## Latest release
 
-Latest version: `v1.7.1`
+Latest version: `v1.8.0`
 
-Release page: https://github.com/SkywardLab/homebrew-sealsuite/releases/tag/v1.7.1
+Release page: https://github.com/SkywardLab/homebrew-sealsuite/releases/tag/v1.8.0
 
 All releases: https://github.com/SkywardLab/homebrew-sealsuite/releases
 
@@ -61,24 +61,24 @@ Choose the GUI package for the desktop app. Choose the CLI package for terminal 
 
 | Platform | CPU | Asset |
 | --- | --- | --- |
-| Linux | amd64 | [`SealSuite-GUI-v1.7.1-linux-amd64.tar.xz`](https://github.com/SkywardLab/homebrew-sealsuite/releases/download/v1.7.1/SealSuite-GUI-v1.7.1-linux-amd64.tar.xz) |
-| macOS | Apple Silicon | [`SealSuite-GUI-v1.7.1-macos-arm64.tar.xz`](https://github.com/SkywardLab/homebrew-sealsuite/releases/download/v1.7.1/SealSuite-GUI-v1.7.1-macos-arm64.tar.xz) |
-| Windows | amd64 | [`SealSuite-GUI-v1.7.1-windows-amd64.zip`](https://github.com/SkywardLab/homebrew-sealsuite/releases/download/v1.7.1/SealSuite-GUI-v1.7.1-windows-amd64.zip) |
+| Linux | amd64 | [`SealSuite-GUI-v1.8.0-linux-amd64.tar.xz`](https://github.com/SkywardLab/homebrew-sealsuite/releases/download/v1.8.0/SealSuite-GUI-v1.8.0-linux-amd64.tar.xz) |
+| macOS | Apple Silicon | [`SealSuite-GUI-v1.8.0-macos-arm64.tar.xz`](https://github.com/SkywardLab/homebrew-sealsuite/releases/download/v1.8.0/SealSuite-GUI-v1.8.0-macos-arm64.tar.xz) |
+| Windows | amd64 | [`SealSuite-GUI-v1.8.0-windows-amd64.zip`](https://github.com/SkywardLab/homebrew-sealsuite/releases/download/v1.8.0/SealSuite-GUI-v1.8.0-windows-amd64.zip) |
 
 ### CLI packages
 
 | Platform | CPU | Asset |
 | --- | --- | --- |
-| Linux | amd64 | [`SealSuite-CLI-v1.7.1-linux-amd64.tar.xz`](https://github.com/SkywardLab/homebrew-sealsuite/releases/download/v1.7.1/SealSuite-CLI-v1.7.1-linux-amd64.tar.xz) |
-| macOS | Apple Silicon | [`SealSuite-CLI-v1.7.1-macos-arm64.tar.xz`](https://github.com/SkywardLab/homebrew-sealsuite/releases/download/v1.7.1/SealSuite-CLI-v1.7.1-macos-arm64.tar.xz) |
-| Windows | amd64 | [`SealSuite-CLI-v1.7.1-windows-amd64.zip`](https://github.com/SkywardLab/homebrew-sealsuite/releases/download/v1.7.1/SealSuite-CLI-v1.7.1-windows-amd64.zip) |
+| Linux | amd64 | [`SealSuite-CLI-v1.8.0-linux-amd64.tar.xz`](https://github.com/SkywardLab/homebrew-sealsuite/releases/download/v1.8.0/SealSuite-CLI-v1.8.0-linux-amd64.tar.xz) |
+| macOS | Apple Silicon | [`SealSuite-CLI-v1.8.0-macos-arm64.tar.xz`](https://github.com/SkywardLab/homebrew-sealsuite/releases/download/v1.8.0/SealSuite-CLI-v1.8.0-macos-arm64.tar.xz) |
+| Windows | amd64 | [`SealSuite-CLI-v1.8.0-windows-amd64.zip`](https://github.com/SkywardLab/homebrew-sealsuite/releases/download/v1.8.0/SealSuite-CLI-v1.8.0-windows-amd64.zip) |
 
 ### Arch Linux package
 
 | Package | Asset |
 | --- | --- |
-| Runtime package | [`sealsuite-1.7.1-1-x86_64.pkg.tar.zst`](https://github.com/SkywardLab/homebrew-sealsuite/releases/download/v1.7.1/sealsuite-1.7.1-1-x86_64.pkg.tar.zst) |
-| Debug package | [`sealsuite-debug-1.7.1-1-x86_64.pkg.tar.zst`](https://github.com/SkywardLab/homebrew-sealsuite/releases/download/v1.7.1/sealsuite-debug-1.7.1-1-x86_64.pkg.tar.zst) |
+| Runtime package | [`sealsuite-1.8.0-1-x86_64.pkg.tar.zst`](https://github.com/SkywardLab/homebrew-sealsuite/releases/download/v1.8.0/sealsuite-1.8.0-1-x86_64.pkg.tar.zst) |
+| Debug package | [`sealsuite-debug-1.8.0-1-x86_64.pkg.tar.zst`](https://github.com/SkywardLab/homebrew-sealsuite/releases/download/v1.8.0/sealsuite-debug-1.8.0-1-x86_64.pkg.tar.zst) |
 
 ## Run SealSuite
 
@@ -133,9 +133,11 @@ Useful optional fields:
 | `use_vpn_dns` | `true` | Applies VPN DNS while the tunnel runs. |
 | `auto_setup_routes` | `true` | Automatically configures routes from the VPN response. |
 | `route_mode` | `split` | Route mode saved in config. |
+| `vpn_additional_routes` | `null` | CIDRs appended to server routes before allowlist and denylist processing. |
+| `vpn_additional_domains` | `null` | Hostnames resolved on every connection and appended as IPv4 `/32` or IPv6 `/128` routes before route filtering. |
 | `vpn_allowed_routes` | `null` | Optional CIDR allowlist intersected with server routes before WireGuard allowed IPs and OS route setup. Empty list means no VPN routes. |
 | `vpn_disallowed_routes` | `null` | CIDR routes carved out of WireGuard allowed IPs and OS route setup. |
-| `force_protocol` | `null` | Optional WireGuard transport override. Use `udp` or `tcp`; unset follows supported server protocol modes. |
+| `force_protocol` | `null` | Optional WireGuard transport override. Use `udp` or `tcp`; unset follows supported server `protocol_mode` values (`0`/`2` as UDP, `1` as TCP). Unsupported protocol modes are skipped or rejected. |
 | `verify_tls` | `true` | TLS certificate verification. |
 | `debug_wg` | `false` | Enables verbose WireGuard logs. |
 | `state` | `null` | Login state cache. Set to `Init` to force a fresh login. |
