@@ -4,8 +4,8 @@
 class Sealsuite < Formula
   desc "VPN client with userspace SOCKS5 mode"
   homepage "https://github.com/SkywardLab/homebrew-sealsuite"
-  url "https://github.com/SkywardLab/homebrew-sealsuite/releases/download/v1.8.4/SealSuite-CLI-v1.8.4-macos-arm64.tar.xz"
-  sha256 "5b77623475aab12fed5b12d66041e61aae28be272a83a0dda77ba82eb1a526b4"
+  url "https://github.com/SkywardLab/homebrew-sealsuite/releases/download/v1.8.5/SealSuite-CLI-v1.8.5-macos-arm64.tar.xz"
+  sha256 "9feffcf5a26c226fd5b6c70e82793412a33338bd90ce1f413035a9d23ebad1f8"
 
   depends_on arch: :arm64
   depends_on :macos
