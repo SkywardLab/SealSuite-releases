@@ -9,8 +9,8 @@ SealSuite is a standalone SealSuite (Corplink) VPN client with a bundled WireGua
 Apple Silicon macOS users can install the CLI and manage SOCKS5 mode as a user LaunchAgent:
 
 ```bash
-brew tap SkywardLab/sealsuite
-brew trust SkywardLab/sealsuite
+brew tap ora302/sealsuite
+brew trust ora302/sealsuite
 brew install sealsuite
 ```
 
@@ -47,11 +47,11 @@ Service logs:
 
 ## Latest release
 
-Latest version: `v1.8.5`
+Latest version: `v1.9.0`
 
-Release page: https://github.com/SkywardLab/homebrew-sealsuite/releases/tag/v1.8.5
+Release page: https://github.com/ora302/homebrew-sealsuite/releases/tag/v1.9.0
 
-All releases: https://github.com/SkywardLab/homebrew-sealsuite/releases
+All releases: https://github.com/ora302/homebrew-sealsuite/releases
 
 Choose the GUI package for the desktop app. Choose the CLI package for terminal or service usage.
 
@@ -61,24 +61,24 @@ Choose the GUI package for the desktop app. Choose the CLI package for terminal 
 
 | Platform | CPU | Asset |
 | --- | --- | --- |
-| Linux | amd64 | [`SealSuite-GUI-v1.8.5-linux-amd64.tar.xz`](https://github.com/SkywardLab/homebrew-sealsuite/releases/download/v1.8.5/SealSuite-GUI-v1.8.5-linux-amd64.tar.xz) |
-| macOS | Apple Silicon | [`SealSuite-GUI-v1.8.5-macos-arm64.tar.xz`](https://github.com/SkywardLab/homebrew-sealsuite/releases/download/v1.8.5/SealSuite-GUI-v1.8.5-macos-arm64.tar.xz) |
-| Windows | amd64 | [`SealSuite-GUI-v1.8.5-windows-amd64.zip`](https://github.com/SkywardLab/homebrew-sealsuite/releases/download/v1.8.5/SealSuite-GUI-v1.8.5-windows-amd64.zip) |
+| Linux | amd64 | [`SealSuite-GUI-v1.9.0-linux-amd64.tar.xz`](https://github.com/ora302/homebrew-sealsuite/releases/download/v1.9.0/SealSuite-GUI-v1.9.0-linux-amd64.tar.xz) |
+| macOS | Apple Silicon | [`SealSuite-GUI-v1.9.0-macos-arm64.tar.xz`](https://github.com/ora302/homebrew-sealsuite/releases/download/v1.9.0/SealSuite-GUI-v1.9.0-macos-arm64.tar.xz) |
+| Windows | amd64 | [`SealSuite-GUI-v1.9.0-windows-amd64.zip`](https://github.com/ora302/homebrew-sealsuite/releases/download/v1.9.0/SealSuite-GUI-v1.9.0-windows-amd64.zip) |
 
 ### CLI packages
 
 | Platform | CPU | Asset |
 | --- | --- | --- |
-| Linux | amd64 | [`SealSuite-CLI-v1.8.5-linux-amd64.tar.xz`](https://github.com/SkywardLab/homebrew-sealsuite/releases/download/v1.8.5/SealSuite-CLI-v1.8.5-linux-amd64.tar.xz) |
-| macOS | Apple Silicon | [`SealSuite-CLI-v1.8.5-macos-arm64.tar.xz`](https://github.com/SkywardLab/homebrew-sealsuite/releases/download/v1.8.5/SealSuite-CLI-v1.8.5-macos-arm64.tar.xz) |
-| Windows | amd64 | [`SealSuite-CLI-v1.8.5-windows-amd64.zip`](https://github.com/SkywardLab/homebrew-sealsuite/releases/download/v1.8.5/SealSuite-CLI-v1.8.5-windows-amd64.zip) |
+| Linux | amd64 | [`SealSuite-CLI-v1.9.0-linux-amd64.tar.xz`](https://github.com/ora302/homebrew-sealsuite/releases/download/v1.9.0/SealSuite-CLI-v1.9.0-linux-amd64.tar.xz) |
+| macOS | Apple Silicon | [`SealSuite-CLI-v1.9.0-macos-arm64.tar.xz`](https://github.com/ora302/homebrew-sealsuite/releases/download/v1.9.0/SealSuite-CLI-v1.9.0-macos-arm64.tar.xz) |
+| Windows | amd64 | [`SealSuite-CLI-v1.9.0-windows-amd64.zip`](https://github.com/ora302/homebrew-sealsuite/releases/download/v1.9.0/SealSuite-CLI-v1.9.0-windows-amd64.zip) |
 
 ### Arch Linux package
 
 | Package | Asset |
 | --- | --- |
-| Runtime package | [`sealsuite-1.8.5-1-x86_64.pkg.tar.zst`](https://github.com/SkywardLab/homebrew-sealsuite/releases/download/v1.8.5/sealsuite-1.8.5-1-x86_64.pkg.tar.zst) |
-| Debug package | [`sealsuite-debug-1.8.5-1-x86_64.pkg.tar.zst`](https://github.com/SkywardLab/homebrew-sealsuite/releases/download/v1.8.5/sealsuite-debug-1.8.5-1-x86_64.pkg.tar.zst) |
+| Runtime package | [`sealsuite-1.9.0-1-x86_64.pkg.tar.zst`](https://github.com/ora302/homebrew-sealsuite/releases/download/v1.9.0/sealsuite-1.9.0-1-x86_64.pkg.tar.zst) |
+| Debug package | [`sealsuite-debug-1.9.0-1-x86_64.pkg.tar.zst`](https://github.com/ora302/homebrew-sealsuite/releases/download/v1.9.0/sealsuite-debug-1.9.0-1-x86_64.pkg.tar.zst) |
 
 ## Run SealSuite
 
@@ -129,7 +129,7 @@ Useful optional fields:
 | Field | Default | Description |
 | --- | --- | --- |
 | `vpn_server_name` | `null` | Exact VPN `en_name` to select. |
-| `vpn_select_strategy` | GUI selection, or `default` in non-TTY | `default` chooses the first pingable server; `latency` chooses the lowest-latency server. |
+| `vpn_select_strategy` | `default` | `default` and an empty value choose the first pingable server. `latency` chooses the lowest-latency server. `manual` uses the saved server name. |
 | `use_vpn_dns` | `true` | Applies VPN DNS while the tunnel runs. |
 | `auto_setup_routes` | `true` | Automatically configures routes from the VPN response. |
 | `route_mode` | `split` | Route mode saved in config. |

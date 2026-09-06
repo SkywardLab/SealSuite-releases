@@ -3,9 +3,9 @@
 # Installs the SealSuite CLI and defines its user-level SOCKS5 service.
 class Sealsuite < Formula
   desc "VPN client with userspace SOCKS5 mode"
-  homepage "https://github.com/SkywardLab/homebrew-sealsuite"
-  url "https://github.com/SkywardLab/homebrew-sealsuite/releases/download/v1.8.5/SealSuite-CLI-v1.8.5-macos-arm64.tar.xz"
-  sha256 "9feffcf5a26c226fd5b6c70e82793412a33338bd90ce1f413035a9d23ebad1f8"
+  homepage "https://github.com/ora302/homebrew-sealsuite"
+  url "https://github.com/ora302/homebrew-sealsuite/releases/download/v1.9.0/SealSuite-CLI-v1.9.0-macos-arm64.tar.xz"
+  sha256 "c97cd9af314dbd6fb9873960e4627a12973127b6cd6e721a4c52e363a38b1a1c"
 
   depends_on arch: :arm64
   depends_on :macos
