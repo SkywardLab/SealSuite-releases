@@ -15,13 +15,13 @@ jobs:
       - name: update homebrew
         run: brew update
       - name: register checkout as tap
-        run: brew tap --custom-remote SkywardLab/sealsuite "$GITHUB_WORKSPACE"
+        run: brew tap --custom-remote ora302/sealsuite "$GITHUB_WORKSPACE"
       - name: style formula
-        run: brew style SkywardLab/sealsuite/sealsuite
+        run: brew style ora302/sealsuite/sealsuite
       - name: audit formula
-        run: brew audit --strict SkywardLab/sealsuite/sealsuite
+        run: brew audit --strict ora302/sealsuite/sealsuite
       - name: install formula
-        run: brew install SkywardLab/sealsuite/sealsuite
+        run: brew install ora302/sealsuite/sealsuite
       - name: test formula
         run: brew test sealsuite
       - name: inspect service definition
